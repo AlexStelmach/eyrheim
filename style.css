@@ -1,0 +1,23 @@
+/* Эйрхейм — дополнительные адаптивные стили */
+@media (max-width: 860px){
+  body{display:block!important}
+  .sidebar{
+    position:fixed!important;left:0!important;top:0!important;bottom:0!important;
+    width:min(82vw,320px)!important;height:100dvh!important;z-index:1001!important;
+    transform:translateX(-105%)!important;transition:transform .25s ease!important;
+    overflow-y:auto!important;overflow-x:hidden!important;
+    box-shadow:0 0 35px rgba(0,0,0,.45)!important;
+  }
+  body.nav-open .sidebar{transform:translateX(0)!important}
+  .mobile-menu-btn{
+    display:flex!important;position:fixed;left:14px;top:14px;z-index:1003;
+    width:46px;height:46px;border:1px solid var(--line,#30343d);border-radius:13px;
+    background:rgba(20,23,29,.96);color:var(--text,#f4f0e8);
+    align-items:center;justify-content:center;font-size:25px;line-height:1;cursor:pointer;
+    box-shadow:0 8px 24px rgba(0,0,0,.28)
+  }
+  .mobile-menu-overlay{display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.58)}
+  body.nav-open .mobile-menu-overlay{display:block}
+  main,.main,.content{margin-left:0!important;width:100%!important}
+}
+@media (min-width:861px){.mobile-menu-btn,.mobile-menu-overlay{display:none!important}}
