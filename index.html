@@ -46,6 +46,7 @@ details.lore{border:1px solid var(--line);border-radius:12px;padding:12px 14px;b
 .travel-table tr:last-child td{border-bottom:0}.travel-table td:first-child{font-weight:700;color:var(--text)}
 .map-rules{margin-top:18px}
 </style>
+<link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 <div class="app">
@@ -187,4 +188,5 @@ sectionTitle.textContent=titles[id][0]; sectionLead.textContent=titles[id][1]; s
 searchInput.addEventListener("input",e=>filterContent(e.target.value.toLowerCase().trim()));
 function filterContent(q){const active=document.querySelector(".section.active"); if(!active)return; active.querySelectorAll(".card,.character,.step,details.lore").forEach(el=>{el.style.display=!q||el.innerText.toLowerCase().includes(q)?"":"none"})}
 </script>
+<script src="script.js?v=2"></script>
 </body></html>
